@@ -1,4 +1,5 @@
 var xmlHttp
+
 function showResults () {
 	xmlHttp = GetXmlHttpObject();
 	if(xmlHttp ==null)
@@ -6,7 +7,7 @@ function showResults () {
 		alert("Browser does not support HTTP Request");
 		return
 	}
-	var url="ranking_search.php";
+	var url="comments_search.php";
 	xmlHttp.onreadystatechange=stateChanged ;
 	xmlHttp.open("GET",url,true);
 	xmlHttp.send(null);
@@ -41,3 +42,4 @@ function stateChanged()
 		 	document.getElementById("detail").innerHTML=xmlHttp.responseText 
 		 } 
 }
+
